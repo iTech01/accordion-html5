@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c1d21;
+    height: 600px;
+}
+
+section h1 {
+    text-align: center;
+    color: #f9f9fa;
+    margin-bottom: 18px;
+}
+
+.container {
+    width: 365px;
+    height: auto;
+    box-shadow: 1px 2px 2px 0px rgba(10, 10, 10, 0.2);
+}
+
+.container .techs h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 34px;
+    padding-right: 20px;
+    width: auto;
+    height: 53px;
+    max-height: auto;
+    background: #363D43;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FDD566;
+    border: 1px solid #1F282D;
+    cursor: pointer;
+}
+
+.techs h3::after {
+    content: "➕";
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.active h3::after {
+    content: "➖";
+}
+
+.accordion p {
+    display: none;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 12px;
+    letter-spacing: 1px;
+    padding: 30px 55px;
+    color: #BE5454;
+    background: #1c1d21;
+}
+
+div .active p {
+    display: block;
+    animation: slowDown .4s forwards;
+}
+
+@keyframes slowDown {
+    from {
+        opacity: 0.4;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 300px;
+    }
+}

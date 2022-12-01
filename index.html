@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        this.addEventListener("DOMContentLoaded", initAccordion);
+
+        function initAccordion() {
+
+            const techs = document.querySelectorAll(".container .techs");
+
+            const ActiveClass = "active";
+
+            if (techs.length) {
+                techs[0].classList.add(ActiveClass);
+                function activeAccordion() {
+                    this.classList.toggle(ActiveClass);
+                }
+                techs.forEach((tech) => {
+                    tech.addEventListener("click", activeAccordion);
+                })
+            }
+
+        }
+    </script>
+    <title>Accordion</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Accordion List</h1>
+            <div class="container">
+                <div class="accordion">
+                    <div class="techs">
+                        <h3>
+                            HTML
+                        </h3>
+                        <p>
+                            HTML (Linguagem de Marcação de HiperTexto)
+                            é o bloco de construção mais básico da web.
+                            Define
+                            o significado e a estrutura do conteúdo
+                            da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação CSS ou a funcionalidade/comportamento JavaScript de uma página da web.
+                        </p>
+                    </div>
+                    <div class="techs">
+                        <h3>
+                            CSS
+                        </h3>
+                        <p>
+                            CSS (Folhas de Estilo em Cascata) é uma linguagem de estilo (en-US) usada para descrever a
+                            apresentação de um documento escrito em HTML ou em XML (incluindo várias linguagens em XML
+                            como SVG, MathML ou XHTML).O CSS descreve como elementos são mostrados na tela, no papel, na
+                            fala ou em outras mídias.
+                        </p>
+                    </div>
+                    <div class="techs">
+                        <h3>
+                            JS
+                        </h3>
+                        <p>
+                            JavaScript (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em
+                            objetos com funções de primeira classe, mais conhecida como a linguagem de script para
+                            páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,
+                            Apache CouchDB e Adobe Acrobat.
+                        </p>
+                    </div>
+                    <div class="techs">
+                        <h3>
+                            jQuery
+                        </h3>
+                        <p>
+                            jQuery é uma biblioteca livre que contém funções da linguagem de programação JavaScript que
+                            interage com páginas em HTML, desenvolvida para simplificar os scripts
+                            executados/interpretados no navegador de internet do usuário.
+                        </p>
+                    </div>
+                    <div class="techs">
+                        <h3>
+                            ReactJs
+                        </h3>
+                        <p>
+                            O React é a biblioteca mais popular do JavaScript e é usada para construir uma interface de
+                            usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um
+                            novo método de renderizar sites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
